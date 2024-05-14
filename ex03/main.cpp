@@ -12,31 +12,40 @@
 
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
+
+// int main(void)
+// {
+// 	ClapTrap avery("Avery");
+// 	ClapTrap dylan("Dylan");
+// 	ScavTrap joe("Joe");
+// 	FragTrap jane("Jane");
+
+// 	dylan.attack("Random");
+// 	dylan.takeDamage(5);
+// 	joe.attack("Random");
+// 	joe.guardGate();
+// 	jane.attack("Random");
+// 	jane.takeDamage(10);
+// 	joe.takeDamage(50);
+// 	joe.takeDamage(50);
+// 	joe.beRepaired(5);
+// 	avery.attack("Random_two");
+// 	avery.takeDamage(5);
+// 	avery.beRepaired(3);
+// 	avery.takeDamage(8);
+// 	avery.takeDamage(3);
+// 	avery.attack("Random");
+// 	jane.highFivesGuys();
+// 	jane.takeDamage(90);
+// 	jane.highFivesGuys();
+// 	joe.guardGate();
+// }
 
 int main(void)
 {
-	ClapTrap avery("Avery");
-	ClapTrap dylan("Dylan");
-	ScavTrap joe("Joe");
-	FragTrap jane("Jane");
+	DiamondTrap bing("Bing");
 
-	dylan.attack("Random");
-	dylan.takeDamage(5);
-	joe.attack("Random");
-	joe.guardGate();
-	jane.attack("Random");
-	jane.takeDamage(10);
-	joe.takeDamage(50);
-	joe.takeDamage(50);
-	joe.beRepaired(5);
-	avery.attack("Random_two");
-	avery.takeDamage(5);
-	avery.beRepaired(3);
-	avery.takeDamage(8);
-	avery.takeDamage(3);
-	avery.attack("Random");
-	jane.highFivesGuys();
-	jane.takeDamage(90);
-	jane.highFivesGuys();
-	joe.guardGate();
+	bing.takeDamage(100);
+	bing.attack("random");
 }

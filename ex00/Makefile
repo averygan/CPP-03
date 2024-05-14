@@ -32,6 +32,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	@echo "$(B_GREEN)$(NAME) compiled$(END)"
 
 clean:
 	@rm -fr $(OBJS)

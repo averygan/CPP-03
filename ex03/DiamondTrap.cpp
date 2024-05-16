@@ -13,15 +13,19 @@
 #include "DiamondTrap.hpp"
 
 // Constructors
-DiamondTrap::DiamondTrap() : FragTrap(), ScavTrap()
+DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap()
 {
 	std::cout << "DiamondTrap Default constructor called!" << std::endl;
 }
 
+/* Expected results:
+hit points 100
+energy points 50
+attack damage 30 */
 DiamondTrap::DiamondTrap(std::string new_name) :
-	ClapTrap(new_name + "_clap_trap"), 
-	FragTrap(new_name + "_frag_trap"), 
-	ScavTrap(new_name + "_scav_trap"),
+	ClapTrap(new_name + "_clap_name"), 
+	ScavTrap(new_name),
+	FragTrap(new_name), 
 	name(new_name)
 {
 	this->hit_points = FragTrap::hit_points;
@@ -30,7 +34,7 @@ DiamondTrap::DiamondTrap(std::string new_name) :
 	std::cout << "DiamondTrap Name param constructor called!" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &copy) : ClapTrap(copy), FragTrap(copy), ScavTrap(copy)
+DiamondTrap::DiamondTrap(const DiamondTrap &copy) : ClapTrap(copy), ScavTrap(copy), FragTrap(copy)
 {
 	*this = copy;
 	std::cout << "DiamondTrap Copy constructor called!" << std::endl;
@@ -52,3 +56,11 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &copy)
 	std::cout << "DiamondTrap Copy Assignment Operator called!" << std::endl;
 	return *this;	
 }
+
+void DiamondTrap::whoAmI()
+{
+	std::cout << BROWN << \
+	"My name is " << RESET << this->name << std::endl << BROWN << \
+	"My ClapTrap name is " << RESET << ClapTrap::name << RESET << std::endl;
+}
+

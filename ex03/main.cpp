@@ -48,4 +48,5 @@ int main(void)
 
 	bing.takeDamage(100);
 	bing.attack("random");
+	bing.whoAmI();
 }

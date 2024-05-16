@@ -111,5 +111,5 @@ void ClapTrap::printStats()
 	std::cout << std::endl;
 	std::cout << this->name << std::endl;
 	std::cout << "HP: " << this->hit_points << " Energy points: " << \
-		this->energy_points << std::endl << std::endl << RESET;
+		this->energy_points << " Attack damage: " << this->attack_damage << std::endl << std::endl << RESET;
 }

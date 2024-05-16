@@ -17,7 +17,7 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
-class DiamondTrap : public FragTrap, public ScavTrap
+class DiamondTrap : public ScavTrap, public FragTrap
 {
 public:
 	DiamondTrap();
@@ -26,6 +26,9 @@ public:
 	virtual ~DiamondTrap();
 
 	DiamondTrap &operator=(const DiamondTrap &copy);
+
+	using ScavTrap::attack;
+	void whoAmI();
 
 private:
 	std::string name;
